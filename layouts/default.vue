@@ -5,25 +5,30 @@
             <main>
                 <Nuxt />
             </main>
+            <Footer />
         </div>
     </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
+import Footer from '@/components/Footer.vue'
 
 export default {
-    components: [Header],
+    components: [Header, Footer],
 }
 </script>
 
-<style>
+<style lang="scss">
+html {
+    cursor: pointer;
+}
+
 .teletext__container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    display: grid;
+    grid-gap: 20px;
     margin: auto;
     min-height: 30rem;
-    width: 40rem;
+    width: max-content;
 }
 </style>

@@ -1,6 +1,8 @@
 <template lang="pug">
 <div>
-    h2.green.table-title {{ league.season }}/{{ (league.season + 1).toString().substring(2) }} {{ league.name }} Table
+    h2.green.table-title {{ league.name }} Table
+        select.season-select.blackbg.green(name="season" @change="handleSeasonSelect")
+            option(v-for="season in seasons" :value="season" :selected="$route.params.season === season.toString()") {{ season }}/{{ (season + 1).toString().substring(2) }}
     table
         thead
             tr
@@ -51,15 +53,40 @@ export default {
             standings: league.standings[0],
         }
     },
+    data() {
+        return {
+            seasons: [
+                2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
+                2020,
+            ],
+        }
+    },
+    methods: {
+        handleSeasonSelect(e) {
+            console.log('e', e.target.value)
+            this.$router.push(e.target.value)
+        },
+    },
 }
 </script>
 
 <style lang="scss" scoped>
+.table-title,
+.season-select {
+    font-weight: 100;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
 .table-title {
     text-transform: uppercase;
     margin-bottom: 20px;
-    font-weight: 100;
-    font-size: 22px;
+}
+
+.season-select {
+    font-family: inherit;
+    margin-left: 1em;
+    border: none;
 }
 
 table {

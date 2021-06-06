@@ -1,17 +1,18 @@
 <template lang="pug">
     header
         div.bar
-            span.white P100
+            span.white P{{ $route.params.season }}
             span.white CEEFAX 1
             span.white 324
             span.white {{ date }}
-            span.yellow {{ time }}4
+            span.yellow {{ time }}
         div.banner
             div.bbc
                 <span>&#xe22a;&#xe203;&#xe213;&#xe22b;&#xe22a;&#xe203;&#xe213;&#xe22b;&#xe22a;&#xe203;&#xe213;&#xe22b;</span>
                 <span>&#xe22a;&#xe200;&#xe204;&#xe22b;&#xe22a;&#xe200;&#xe204;&#xe22b;&#xe22a;&#xe200;&#xe207;&#xe22b;</span>
                 <span>&#xe202;&#xe203;&#xe203;&#xe203;&#xe202;&#xe203;&#xe203;&#xe203;&#xe202;&#xe203;&#xe203;&#xe203;</span>
-            div.football.bluebg
+            div.title.bluebg
+                h1.green FOOTYTEXT
 </template>
 
 <script>
@@ -55,12 +56,21 @@ header {
     display: grid;
     grid-template-columns: max-content auto;
     gap: 10px;
+    transform: scaleY(1.2);
+    transform-origin: top center;
 }
 .bbc {
     display: grid;
 }
-.football {
+.title {
     width: 100%;
     height: 46px;
+
+    h1 {
+        margin-top: 14px;
+        text-align: center;
+        letter-spacing: 12px;
+        text-shadow: 2px 5px 0px black;
+    }
 }
 </style>

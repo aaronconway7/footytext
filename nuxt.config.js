@@ -11,7 +11,12 @@ export default {
                 name: 'viewport',
                 content: 'width=device-width, initial-scale=1',
             },
-            { hid: 'description', name: 'description', content: '' },
+            {
+                hid: 'description',
+                name: 'description',
+                content:
+                    'View past and present English Premier League tables in a nostalgic teletext/ceefax recreation!',
+            },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
