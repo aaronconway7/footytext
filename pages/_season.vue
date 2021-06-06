@@ -38,7 +38,7 @@ export default {
             `https://v3.football.api-sports.io/standings?league=39&season=${params.season}`,
             {
                 headers: {
-                    'x-apisports-key': process.env.API_FOOTBALL_KEY,
+                    'x-apisports-key': process.env.NUXT_ENV_API_FOOTBALL_KEY,
                 },
             }
         )
