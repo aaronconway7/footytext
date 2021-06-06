@@ -33,12 +33,12 @@
 
 <script>
 export default {
-    async asyncData({ $axios, env, params }) {
+    async asyncData({ $axios, params }) {
         const data = await $axios.$get(
             `https://v3.football.api-sports.io/standings?league=39&season=${params.season}`,
             {
                 headers: {
-                    'x-apisports-key': env.API_FOOTBALL_KEY,
+                    'x-apisports-key': process.env.API_FOOTBALL_KEY,
                 },
             }
         )
