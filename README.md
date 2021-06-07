@@ -4,13 +4,13 @@
 
 ![Screenshot](./assets/img/screenshot.png)
 
-> ⚠️ Using free version of API so restricted to 100 requests/day.
+> ⚠️ Using free version of API so restricted to 100 requests/day for seasons >= 2015.
 
 View past and present English Premier League tables in a nostalgic teletext/ceefax recreation! Built to practice Vue.
 
 ## Stack
-- [NuxtJs](https://nuxtjs.org/) (Vue)
 
+-   [NuxtJs](https://nuxtjs.org/) (Vue)
 
 ## Build Setup
 
@@ -33,4 +33,6 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ## Credits
 
-API provied by [API-FOOTBALL](https://www.api-football.com/)
+- API provied by [API-FOOTBALL](https://www.api-football.com/)
+- League data < 2015 provided by [jokecamp/FootballData](https://github.com/jokecamp/FootballData)
+- Teletext CSS from [Galax](https://galax.xyz/TELETEXT/)

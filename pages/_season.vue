@@ -17,7 +17,7 @@
                 td GD
                 td PTS
         tbody
-            tr(v-for="s in standings" :key="s.team.id" :class="{ cyan: s.rank % 2 === 0 }")
+            tr(v-for="s in league.standings" :key="s.team.id" :class="{ cyan: s.rank % 2 === 0 }")
                 td {{ s.rank }}
                 td.team-name {{ s.team.name }}
                 td {{ s.all.played }}
@@ -32,38 +32,67 @@
 </template>
 
 <script>
+import range from 'lodash/range'
+
 export default {
     async asyncData({ $axios, params }) {
-        const data = await $axios.$get(
-            `https://v3.football.api-sports.io/standings?league=39&season=${params.season}`,
-            {
-                headers: {
-                    'x-apisports-key': process.env.NUXT_ENV_API_FOOTBALL_KEY,
-                },
-            }
-        )
+        let data, standings
 
-        const league = await data.response[0].league
+        if (Number(params.season) < 2015) {
+            data = await $axios.$get(
+                `https://raw.githubusercontent.com/jokecamp/FootballData/master/EPL%201992%20-%202015/tables/epl-${params.season.substring(
+                    2
+                )}-${(Number(params.season) + 1).toString().substring(2)}.json`
+            )
+
+            standings = await data.map((team) => ({
+                rank: team.rank,
+                team: {
+                    id: team.rank,
+                    name: team.team,
+                },
+                goalsDiff: team[`goals-dff`],
+                points: team.points,
+                all: {
+                    played: team.played,
+                    win: team.wins,
+                    draw: team.draws,
+                    lose: team.losses,
+                    goals: {
+                        for: team[`goals-for`],
+                        against: team[`goals-against`],
+                    },
+                },
+            }))
+        } else {
+            data = await $axios.$get(
+                `https://v3.football.api-sports.io/standings?league=39&season=${params.season}`,
+                {
+                    headers: {
+                        'x-apisports-key':
+                            process.env.NUXT_ENV_API_FOOTBALL_KEY,
+                    },
+                }
+            )
+
+            standings = await data.response[0].league.standings[0]
+        }
 
         return {
             league: {
-                name: league.name,
-                season: league.season,
+                name: `Premier League`,
+                season: params.season,
+                standings,
             },
-            standings: league.standings[0],
         }
     },
     data() {
         return {
-            seasons: [
-                2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019,
-                2020,
-            ],
+            seasons: range(1992, new Date().getFullYear()),
         }
     },
     methods: {
         handleSeasonSelect(e) {
-            console.log('e', e.target.value)
             this.$router.push(e.target.value)
         },
     },
@@ -87,6 +116,7 @@ export default {
     font-family: inherit;
     margin-left: 1em;
     border: none;
+    cursor: pointer;
 }
 
 table {

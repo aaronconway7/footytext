@@ -20,12 +20,13 @@ export default {
 </script>
 
 <style lang="scss">
-html {
-    cursor: pointer;
+:root {
+    --small-screen: 500px;
 }
 
 .teletext__container {
     display: grid;
+    grid-auto-rows: max-content;
     grid-gap: 20px;
     margin: auto;
     min-height: 30rem;
