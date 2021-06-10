@@ -37,8 +37,6 @@ export default {
     },
     created() {
         setInterval(this.getNow, 1000)
-
-        console.log("this.route", this.$route)
     },
 }
 </script>
