@@ -3,7 +3,8 @@
     h2.green.table-title {{ league.name }} Table
         select.season-select.blackbg.green(name="season" @change="handleSeasonSelect")
             option(v-for="season in seasons" :value="season" :selected="$route.params.season === season.toString()") {{ season }}/{{ (season + 1).toString().substring(2) }}
-    table
+    p(v-if="league.standings.length === 0") I've run out of API requests :(
+    table(v-if="league.standings.length > 0")
         thead
             tr
                 td
@@ -75,7 +76,7 @@ export default {
                 }
             )
 
-            standings = await data.response[0].league.standings[0]
+            standings = (await data.response[0]?.league.standings[0]) || []
         }
 
         return {

@@ -3,8 +3,10 @@
         div.strip.bluebg
             p.yellow Created by #[a(href="https://aaronconway.co.uk" target="_blank") Aaron Conway]
         ul
-            li.red Next Page
-            li.green Football
+            li.red
+                NuxtLink(to="/") Fixtures
+            li.green
+                NuxtLink(to="/pl") Premier League
             li.yellow Top Sport
             li.blue Sport
 </template>

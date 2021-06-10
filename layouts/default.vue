@@ -31,5 +31,6 @@ export default {
     margin: auto;
     min-height: 30rem;
     width: max-content;
+    min-width: 700px;
 }
 </style>

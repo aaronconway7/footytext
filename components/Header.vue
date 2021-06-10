@@ -1,9 +1,9 @@
 <template lang="pug">
     header
         div.bar
-            span.white P{{ $route.params.season }}
+            span.white P{{ $route.params.season || 100 }}
             span.white CEEFAX 1
-            span.white 324
+            span.white AC7
             span.white {{ date }}
             span.yellow {{ time }}
         div.banner
@@ -37,6 +37,8 @@ export default {
     },
     created() {
         setInterval(this.getNow, 1000)
+
+        console.log("this.route", this.$route)
     },
 }
 </script>
