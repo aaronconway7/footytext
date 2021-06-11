@@ -4,7 +4,7 @@
             p.yellow Created by #[a(href="https://aaronconway.co.uk" target="_blank") Aaron Conway]
         ul
             li.red
-                NuxtLink(to="/") Fixtures
+                NuxtLink(to="/") Euro 2020
             li.green
                 NuxtLink(to="/1992") Premier League
             li.yellow Top Sport
