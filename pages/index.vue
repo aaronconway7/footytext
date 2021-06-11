@@ -17,20 +17,30 @@ export default {
     components: {
         Fixture,
     },
-    async asyncData({ $axios, params }) {
-        const data = await $axios.$get(
-            `https://v3.football.api-sports.io/fixtures?date=${dayjs().format(
-                'YYYY-MM-DD'
-            )}&league=4&season=2020`,
-            {
-                headers: {
-                    'x-apisports-key': process.env.NUXT_ENV_API_FOOTBALL_KEY,
-                },
-            }
-        )
+    data() {
+        return {
+            fixtures: [],
+        }
+    },
+    created() {
+        this.getFixtures()
+    },
+    methods: {
+        async getFixtures() {
+            const data = await this.$axios.$get(
+                `https://v3.football.api-sports.io/fixtures?date=${dayjs().format(
+                    'YYYY-MM-DD'
+                )}&league=4&season=2020`,
+                {
+                    headers: {
+                        'x-apisports-key':
+                            process.env.NUXT_ENV_API_FOOTBALL_KEY,
+                    },
+                }
+            )
 
-        const fixtures = await data.response
-        return { fixtures }
+            this.fixtures = await data.response
+        },
     },
 }
 </script>

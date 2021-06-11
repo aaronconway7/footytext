@@ -37,12 +37,15 @@ export default {
             )
         },
     },
-    async fetch() {
-        let data
-
-        if (this.fixture.goals.home > 0 || this.fixture.goals.away > 0) {
-            console.log('making API events call')
-            data = await this.$axios.$get(
+    created() {
+        this.getGoals()
+    },
+    methods: {
+        getKickOffTime(date) {
+            return dayjs(date).format(`HH.mm`)
+        },
+        async getGoals() {
+            const data = await this.$axios.$get(
                 `https://v3.football.api-sports.io/fixtures/events?fixture=${this.fixture.fixture.id}`,
                 {
                     headers: {
@@ -52,11 +55,6 @@ export default {
                 }
             )
             this.goals = await data.response.filter((e) => e.type === `Goal`)
-        }
-    },
-    methods: {
-        getKickOffTime(date) {
-            return dayjs(date).format(`HH.mm`)
         },
     },
 }
