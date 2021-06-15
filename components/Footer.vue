@@ -6,7 +6,7 @@
             li.red
                 NuxtLink(to="/") Euro 2020
             li.green
-                NuxtLink(to="/1992") Premier League
+                NuxtLink(to="/pl/1992") Premier League
             li.yellow Top Sport
             li.blue Sport
 </template>

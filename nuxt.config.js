@@ -1,3 +1,5 @@
+import range from 'lodash/range'
+
 export default {
     // Target: https://go.nuxtjs.dev/config-target
     target: 'static',
@@ -19,13 +21,6 @@ export default {
             },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-        // script: [
-        //     {
-        //         'data-ad-client': 'ca-pub-3958577772935924',
-        //         async: true,
-        //         src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-        //     },
-        // ],
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
@@ -42,14 +37,11 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
-        // https://go.nuxtjs.dev/axios
-        '@nuxtjs/axios',
         // https://go.nuxtjs.dev/pwa
         '@nuxtjs/pwa',
+        '@nuxt/http',
+        '@nuxtjs/dayjs',
     ],
-
-    // Axios module configuration: https://go.nuxtjs.dev/config-axios
-    axios: {},
 
     // PWA module configuration: https://go.nuxtjs.dev/pwa
     pwa: {
@@ -60,4 +52,8 @@ export default {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},
+
+    generate: {
+        routes: range(1992, new Date().getFullYear()).map((y) => `/pl/${y}`),
+    },
 }

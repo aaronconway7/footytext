@@ -11,8 +11,6 @@
 </template>
 
 <script>
-import dayjs from 'dayjs'
-
 export default {
     props: {
         fixture: {
@@ -37,24 +35,22 @@ export default {
             )
         },
     },
-    created() {
-        this.getGoals()
+    async fetch() {
+        // Get Goals
+        const data = await this.$http.$get(
+            `https://v3.football.api-sports.io/fixtures/events?fixture=${this.fixture.fixture.id}`,
+            {
+                headers: {
+                    'x-apisports-key': process.env.NUXT_ENV_API_FOOTBALL_KEY,
+                },
+            }
+        )
+        this.goals = await data.response.filter((e) => e.type === `Goal`)
     },
+    fetchOnServer: false,
     methods: {
         getKickOffTime(date) {
-            return dayjs(date).format(`HH.mm`)
-        },
-        async getGoals() {
-            const data = await this.$axios.$get(
-                `https://v3.football.api-sports.io/fixtures/events?fixture=${this.fixture.fixture.id}`,
-                {
-                    headers: {
-                        'x-apisports-key':
-                            process.env.NUXT_ENV_API_FOOTBALL_KEY,
-                    },
-                }
-            )
-            this.goals = await data.response.filter((e) => e.type === `Goal`)
+            return this.$dayjs(date).format(`HH.mm`)
         },
     },
 }

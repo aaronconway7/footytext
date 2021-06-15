@@ -2,7 +2,7 @@
     header
         div.bar
             span.white P{{ $route.params.season || 100 }}
-            span.white CEEFAX 1
+            span.white CEEFAX {{ dailyRequestsRemaining }}
             span.white AC7
             span.white {{ date }}
             span.yellow {{ time }}
@@ -16,21 +16,24 @@
 </template>
 
 <script>
-import dayjs from 'dayjs'
-
 const dateFormat = `ddd DD MMM YYYY`
 const timeFormat = `HH:mm/ss`
 
 export default {
     data() {
         return {
-            date: dayjs().format(dateFormat),
-            time: dayjs().format(timeFormat),
+            date: this.$dayjs().format(dateFormat),
+            time: this.$dayjs().format(timeFormat),
         }
+    },
+    computed: {
+        dailyRequestsRemaining() {
+            return this.$store.state.dailyRequestsRemaining
+        },
     },
     methods: {
         getNow() {
-            const now = dayjs()
+            const now = this.$dayjs()
             this.date = now.format(dateFormat)
             this.time = now.format(timeFormat)
         },
