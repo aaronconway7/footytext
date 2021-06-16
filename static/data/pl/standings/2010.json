@@ -1,0 +1,262 @@
+[
+    {
+        "rank": 1,
+        "team": { "id": 1, "name": "Manchester United" },
+        "goalsDiff": "+41",
+        "points": 80,
+        "all": {
+            "played": 38,
+            "win": 23,
+            "draw": 11,
+            "lose": 4,
+            "goals": { "for": 78, "against": 37 }
+        }
+    },
+    {
+        "rank": 2,
+        "team": { "id": 2, "name": "Chelsea" },
+        "goalsDiff": "+36",
+        "points": 71,
+        "all": {
+            "played": 38,
+            "win": 21,
+            "draw": 8,
+            "lose": 9,
+            "goals": { "for": 69, "against": 33 }
+        }
+    },
+    {
+        "rank": 3,
+        "team": { "id": 3, "name": "Manchester City" },
+        "goalsDiff": "+27",
+        "points": 71,
+        "all": {
+            "played": 38,
+            "win": 21,
+            "draw": 8,
+            "lose": 9,
+            "goals": { "for": 60, "against": 33 }
+        }
+    },
+    {
+        "rank": 4,
+        "team": { "id": 4, "name": "Arsenal" },
+        "goalsDiff": "+29",
+        "points": 68,
+        "all": {
+            "played": 38,
+            "win": 19,
+            "draw": 11,
+            "lose": 8,
+            "goals": { "for": 72, "against": 43 }
+        }
+    },
+    {
+        "rank": 5,
+        "team": { "id": 5, "name": "Tottenham Hotspur" },
+        "goalsDiff": "+9",
+        "points": 62,
+        "all": {
+            "played": 38,
+            "win": 16,
+            "draw": 14,
+            "lose": 8,
+            "goals": { "for": 55, "against": 46 }
+        }
+    },
+    {
+        "rank": 6,
+        "team": { "id": 6, "name": "Liverpool" },
+        "goalsDiff": "+15",
+        "points": 58,
+        "all": {
+            "played": 38,
+            "win": 17,
+            "draw": 7,
+            "lose": 14,
+            "goals": { "for": 59, "against": 44 }
+        }
+    },
+    {
+        "rank": 7,
+        "team": { "id": 7, "name": "Everton" },
+        "goalsDiff": "+6",
+        "points": 54,
+        "all": {
+            "played": 38,
+            "win": 13,
+            "draw": 15,
+            "lose": 10,
+            "goals": { "for": 51, "against": 45 }
+        }
+    },
+    {
+        "rank": 8,
+        "team": { "id": 8, "name": "Fulham" },
+        "goalsDiff": "+6",
+        "points": 49,
+        "all": {
+            "played": 38,
+            "win": 11,
+            "draw": 16,
+            "lose": 11,
+            "goals": { "for": 49, "against": 43 }
+        }
+    },
+    {
+        "rank": 9,
+        "team": { "id": 9, "name": "Aston Villa" },
+        "goalsDiff": -11,
+        "points": 48,
+        "all": {
+            "played": 38,
+            "win": 12,
+            "draw": 12,
+            "lose": 14,
+            "goals": { "for": 48, "against": 59 }
+        }
+    },
+    {
+        "rank": 10,
+        "team": { "id": 10, "name": "Sunderland" },
+        "goalsDiff": -11,
+        "points": 47,
+        "all": {
+            "played": 38,
+            "win": 12,
+            "draw": 11,
+            "lose": 15,
+            "goals": { "for": 45, "against": 56 }
+        }
+    },
+    {
+        "rank": 11,
+        "team": { "id": 11, "name": "West Bromwich Albion" },
+        "goalsDiff": -15,
+        "points": 47,
+        "all": {
+            "played": 38,
+            "win": 12,
+            "draw": 11,
+            "lose": 15,
+            "goals": { "for": 56, "against": 71 }
+        }
+    },
+    {
+        "rank": 12,
+        "team": { "id": 12, "name": "Newcastle United" },
+        "goalsDiff": -1,
+        "points": 46,
+        "all": {
+            "played": 38,
+            "win": 11,
+            "draw": 13,
+            "lose": 14,
+            "goals": { "for": 56, "against": 57 }
+        }
+    },
+    {
+        "rank": 13,
+        "team": { "id": 13, "name": "Stoke City" },
+        "goalsDiff": -2,
+        "points": 46,
+        "all": {
+            "played": 38,
+            "win": 13,
+            "draw": 7,
+            "lose": 18,
+            "goals": { "for": 46, "against": 48 }
+        }
+    },
+    {
+        "rank": 14,
+        "team": { "id": 14, "name": "Bolton Wanderers" },
+        "goalsDiff": -4,
+        "points": 46,
+        "all": {
+            "played": 38,
+            "win": 12,
+            "draw": 10,
+            "lose": 16,
+            "goals": { "for": 52, "against": 56 }
+        }
+    },
+    {
+        "rank": 15,
+        "team": { "id": 15, "name": "Blackburn Rovers" },
+        "goalsDiff": -13,
+        "points": 43,
+        "all": {
+            "played": 38,
+            "win": 11,
+            "draw": 10,
+            "lose": 17,
+            "goals": { "for": 46, "against": 59 }
+        }
+    },
+    {
+        "rank": 16,
+        "team": { "id": 16, "name": "Wigan Athletic" },
+        "goalsDiff": -21,
+        "points": 42,
+        "all": {
+            "played": 38,
+            "win": 9,
+            "draw": 15,
+            "lose": 14,
+            "goals": { "for": 40, "against": 61 }
+        }
+    },
+    {
+        "rank": 17,
+        "team": { "id": 17, "name": "Wolverhampton Wanderers" },
+        "goalsDiff": -20,
+        "points": 40,
+        "all": {
+            "played": 38,
+            "win": 11,
+            "draw": 7,
+            "lose": 20,
+            "goals": { "for": 46, "against": 66 }
+        }
+    },
+    {
+        "rank": 18,
+        "team": { "id": 18, "name": "Birmingham City" },
+        "goalsDiff": "–21",
+        "points": 39,
+        "all": {
+            "played": 38,
+            "win": 8,
+            "draw": 15,
+            "lose": 15,
+            "goals": { "for": 37, "against": 58 }
+        }
+    },
+    {
+        "rank": 19,
+        "team": { "id": 19, "name": "Blackpool" },
+        "goalsDiff": -23,
+        "points": 39,
+        "all": {
+            "played": 38,
+            "win": 10,
+            "draw": 9,
+            "lose": 19,
+            "goals": { "for": 55, "against": 78 }
+        }
+    },
+    {
+        "rank": 20,
+        "team": { "id": 20, "name": "West Ham United" },
+        "goalsDiff": -27,
+        "points": 33,
+        "all": {
+            "played": 38,
+            "win": 7,
+            "draw": 12,
+            "lose": 19,
+            "goals": { "for": 43, "against": 70 }
+        }
+    }
+]

@@ -44,52 +44,9 @@ export default {
         }
     },
     async asyncData({ params, $http }) {
-        const season = Number(params.season)
-        let standings
-
-        if (season < 2015) {
-            const fullSeasonString = `${season.toString().substring(2)}-${(
-                season + 1
-            )
-                .toString()
-                .substring(2)}`
-
-            const data = await $http.$get(
-                `https://raw.githubusercontent.com/jokecamp/FootballData/master/EPL%201992%20-%202015/tables/epl-${fullSeasonString}.json`
-            )
-
-            standings = await data.map((team) => ({
-                rank: team.rank,
-                team: {
-                    id: team.rank,
-                    name: team.team,
-                },
-                goalsDiff: team[`goals-dff`],
-                points: team.points,
-                all: {
-                    played: team.played,
-                    win: team.wins,
-                    draw: team.draws,
-                    lose: team.losses,
-                    goals: {
-                        for: team[`goals-for`],
-                        against: team[`goals-against`],
-                    },
-                },
-            }))
-        } else {
-            const data = await $http.$get(
-                `https://v3.football.api-sports.io/standings?league=39&season=${season}`,
-                {
-                    headers: {
-                        'x-apisports-key':
-                            process.env.NUXT_ENV_API_FOOTBALL_KEY,
-                    },
-                }
-            )
-
-            standings = (await data.response[0]?.league.standings[0]) || []
-        }
+        const standings = await $http.$get(
+            `/data/pl/standings/${params.season}.json`
+        )
 
         return { standings }
     },
