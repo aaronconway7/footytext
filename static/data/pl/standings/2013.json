@@ -1,1 +1,262 @@
-[{"rank":1,"team":{"id":1,"name":"Manchester City"},"goalsDiff":"+65","points":86,"all":{"played":38,"win":27,"draw":5,"lose":6,"goals":{"for":102,"against":37}}},{"rank":2,"team":{"id":2,"name":"Liverpool"},"goalsDiff":"+51","points":84,"all":{"played":38,"win":26,"draw":6,"lose":6,"goals":{"for":101,"against":50}}},{"rank":3,"team":{"id":3,"name":"Chelsea"},"goalsDiff":"+44","points":82,"all":{"played":38,"win":25,"draw":7,"lose":6,"goals":{"for":71,"against":27}}},{"rank":4,"team":{"id":4,"name":"Arsenal"},"goalsDiff":"+27","points":79,"all":{"played":38,"win":24,"draw":7,"lose":7,"goals":{"for":68,"against":41}}},{"rank":5,"team":{"id":5,"name":"Everton"},"goalsDiff":"+22","points":72,"all":{"played":38,"win":21,"draw":9,"lose":8,"goals":{"for":61,"against":39}}},{"rank":6,"team":{"id":6,"name":"Tottenham Hotspur"},"goalsDiff":"+4","points":69,"all":{"played":38,"win":21,"draw":6,"lose":11,"goals":{"for":55,"against":51}}},{"rank":7,"team":{"id":7,"name":"Manchester United"},"goalsDiff":"+21","points":64,"all":{"played":38,"win":19,"draw":7,"lose":12,"goals":{"for":64,"against":43}}},{"rank":8,"team":{"id":8,"name":"Southampton"},"goalsDiff":"+8","points":56,"all":{"played":38,"win":15,"draw":11,"lose":12,"goals":{"for":54,"against":46}}},{"rank":9,"team":{"id":9,"name":"Stoke City"},"goalsDiff":-7,"points":50,"all":{"played":38,"win":13,"draw":11,"lose":14,"goals":{"for":45,"against":52}}},{"rank":10,"team":{"id":10,"name":"Newcastle United"},"goalsDiff":-16,"points":49,"all":{"played":38,"win":15,"draw":4,"lose":19,"goals":{"for":43,"against":59}}},{"rank":11,"team":{"id":11,"name":"Crystal Palace"},"goalsDiff":-15,"points":45,"all":{"played":38,"win":13,"draw":6,"lose":19,"goals":{"for":33,"against":48}}},{"rank":12,"team":{"id":12,"name":"Swansea City"},"goalsDiff":0,"points":42,"all":{"played":38,"win":11,"draw":9,"lose":18,"goals":{"for":54,"against":54}}},{"rank":13,"team":{"id":13,"name":"West Ham United"},"goalsDiff":-11,"points":40,"all":{"played":38,"win":11,"draw":7,"lose":20,"goals":{"for":40,"against":51}}},{"rank":14,"team":{"id":14,"name":"Sunderland"},"goalsDiff":-19,"points":38,"all":{"played":38,"win":10,"draw":8,"lose":20,"goals":{"for":41,"against":60}}},{"rank":15,"team":{"id":15,"name":"Aston Villa"},"goalsDiff":-22,"points":38,"all":{"played":38,"win":10,"draw":8,"lose":20,"goals":{"for":39,"against":61}}},{"rank":16,"team":{"id":16,"name":"Hull City"},"goalsDiff":-15,"points":37,"all":{"played":38,"win":10,"draw":7,"lose":21,"goals":{"for":38,"against":53}}},{"rank":17,"team":{"id":17,"name":"West Bromwich Albion"},"goalsDiff":-16,"points":36,"all":{"played":38,"win":7,"draw":15,"lose":16,"goals":{"for":43,"against":59}}},{"rank":18,"team":{"id":18,"name":"Norwich City"},"goalsDiff":-34,"points":33,"all":{"played":38,"win":8,"draw":9,"lose":21,"goals":{"for":28,"against":62}}},{"rank":19,"team":{"id":19,"name":"Fulham"},"goalsDiff":-45,"points":32,"all":{"played":38,"win":9,"draw":5,"lose":24,"goals":{"for":40,"against":85}}},{"rank":20,"team":{"id":20,"name":"Cardiff City"},"goalsDiff":-42,"points":30,"all":{"played":38,"win":7,"draw":9,"lose":22,"goals":{"for":32,"against":74}}}]
+[
+    {
+        "rank": 1,
+        "team": { "id": 1, "name": "Manchester City" },
+        "goalsDiff": "+65",
+        "points": 86,
+        "all": {
+            "played": 38,
+            "win": 27,
+            "draw": 5,
+            "lose": 6,
+            "goals": { "for": 102, "against": 37 }
+        }
+    },
+    {
+        "rank": 2,
+        "team": { "id": 2, "name": "Liverpool" },
+        "goalsDiff": "+51",
+        "points": 84,
+        "all": {
+            "played": 38,
+            "win": 26,
+            "draw": 6,
+            "lose": 6,
+            "goals": { "for": 101, "against": 50 }
+        }
+    },
+    {
+        "rank": 3,
+        "team": { "id": 3, "name": "Chelsea" },
+        "goalsDiff": "+44",
+        "points": 82,
+        "all": {
+            "played": 38,
+            "win": 25,
+            "draw": 7,
+            "lose": 6,
+            "goals": { "for": 71, "against": 27 }
+        }
+    },
+    {
+        "rank": 4,
+        "team": { "id": 4, "name": "Arsenal" },
+        "goalsDiff": "+27",
+        "points": 79,
+        "all": {
+            "played": 38,
+            "win": 24,
+            "draw": 7,
+            "lose": 7,
+            "goals": { "for": 68, "against": 41 }
+        }
+    },
+    {
+        "rank": 5,
+        "team": { "id": 5, "name": "Everton" },
+        "goalsDiff": "+22",
+        "points": 72,
+        "all": {
+            "played": 38,
+            "win": 21,
+            "draw": 9,
+            "lose": 8,
+            "goals": { "for": 61, "against": 39 }
+        }
+    },
+    {
+        "rank": 6,
+        "team": { "id": 6, "name": "Tottenham Hotspur" },
+        "goalsDiff": "+4",
+        "points": 69,
+        "all": {
+            "played": 38,
+            "win": 21,
+            "draw": 6,
+            "lose": 11,
+            "goals": { "for": 55, "against": 51 }
+        }
+    },
+    {
+        "rank": 7,
+        "team": { "id": 7, "name": "Manchester United" },
+        "goalsDiff": "+21",
+        "points": 64,
+        "all": {
+            "played": 38,
+            "win": 19,
+            "draw": 7,
+            "lose": 12,
+            "goals": { "for": 64, "against": 43 }
+        }
+    },
+    {
+        "rank": 8,
+        "team": { "id": 8, "name": "Southampton" },
+        "goalsDiff": "+8",
+        "points": 56,
+        "all": {
+            "played": 38,
+            "win": 15,
+            "draw": 11,
+            "lose": 12,
+            "goals": { "for": 54, "against": 46 }
+        }
+    },
+    {
+        "rank": 9,
+        "team": { "id": 9, "name": "Stoke City" },
+        "goalsDiff": -7,
+        "points": 50,
+        "all": {
+            "played": 38,
+            "win": 13,
+            "draw": 11,
+            "lose": 14,
+            "goals": { "for": 45, "against": 52 }
+        }
+    },
+    {
+        "rank": 10,
+        "team": { "id": 10, "name": "Newcastle United" },
+        "goalsDiff": -16,
+        "points": 49,
+        "all": {
+            "played": 38,
+            "win": 15,
+            "draw": 4,
+            "lose": 19,
+            "goals": { "for": 43, "against": 59 }
+        }
+    },
+    {
+        "rank": 11,
+        "team": { "id": 11, "name": "Crystal Palace" },
+        "goalsDiff": -15,
+        "points": 45,
+        "all": {
+            "played": 38,
+            "win": 13,
+            "draw": 6,
+            "lose": 19,
+            "goals": { "for": 33, "against": 48 }
+        }
+    },
+    {
+        "rank": 12,
+        "team": { "id": 12, "name": "Swansea City" },
+        "goalsDiff": 0,
+        "points": 42,
+        "all": {
+            "played": 38,
+            "win": 11,
+            "draw": 9,
+            "lose": 18,
+            "goals": { "for": 54, "against": 54 }
+        }
+    },
+    {
+        "rank": 13,
+        "team": { "id": 13, "name": "West Ham United" },
+        "goalsDiff": -11,
+        "points": 40,
+        "all": {
+            "played": 38,
+            "win": 11,
+            "draw": 7,
+            "lose": 20,
+            "goals": { "for": 40, "against": 51 }
+        }
+    },
+    {
+        "rank": 14,
+        "team": { "id": 14, "name": "Sunderland" },
+        "goalsDiff": -19,
+        "points": 38,
+        "all": {
+            "played": 38,
+            "win": 10,
+            "draw": 8,
+            "lose": 20,
+            "goals": { "for": 41, "against": 60 }
+        }
+    },
+    {
+        "rank": 15,
+        "team": { "id": 15, "name": "Aston Villa" },
+        "goalsDiff": -22,
+        "points": 38,
+        "all": {
+            "played": 38,
+            "win": 10,
+            "draw": 8,
+            "lose": 20,
+            "goals": { "for": 39, "against": 61 }
+        }
+    },
+    {
+        "rank": 16,
+        "team": { "id": 16, "name": "Hull City" },
+        "goalsDiff": -15,
+        "points": 37,
+        "all": {
+            "played": 38,
+            "win": 10,
+            "draw": 7,
+            "lose": 21,
+            "goals": { "for": 38, "against": 53 }
+        }
+    },
+    {
+        "rank": 17,
+        "team": { "id": 17, "name": "West Bromwich Albion" },
+        "goalsDiff": -16,
+        "points": 36,
+        "all": {
+            "played": 38,
+            "win": 7,
+            "draw": 15,
+            "lose": 16,
+            "goals": { "for": 43, "against": 59 }
+        }
+    },
+    {
+        "rank": 18,
+        "team": { "id": 18, "name": "Norwich City" },
+        "goalsDiff": -34,
+        "points": 33,
+        "all": {
+            "played": 38,
+            "win": 8,
+            "draw": 9,
+            "lose": 21,
+            "goals": { "for": 28, "against": 62 }
+        }
+    },
+    {
+        "rank": 19,
+        "team": { "id": 19, "name": "Fulham" },
+        "goalsDiff": -45,
+        "points": 32,
+        "all": {
+            "played": 38,
+            "win": 9,
+            "draw": 5,
+            "lose": 24,
+            "goals": { "for": 40, "against": 85 }
+        }
+    },
+    {
+        "rank": 20,
+        "team": { "id": 20, "name": "Cardiff City" },
+        "goalsDiff": -42,
+        "points": 30,
+        "all": {
+            "played": 38,
+            "win": 7,
+            "draw": 9,
+            "lose": 22,
+            "goals": { "for": 32, "against": 74 }
+        }
+    }
+]

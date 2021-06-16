@@ -55,5 +55,6 @@ export default {
 
     generate: {
         routes: range(1992, new Date().getFullYear()).map((y) => `/pl/${y}`),
+        fallback: true,
     },
 }

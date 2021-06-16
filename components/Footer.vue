@@ -4,10 +4,11 @@
             p.yellow Created by #[a(href="https://aaronconway.co.uk" target="_blank") Aaron Conway]
         ul
             li.red
-                NuxtLink(to="/") Euro 2020
+                NuxtLink(to="/news") News
             li.green
                 NuxtLink(to="/pl/1992") Premier League
-            li.yellow Top Sport
+            li.yellow
+                NuxtLink(to="/euro") Euro 2020
             li.blue Sport
 </template>
 
