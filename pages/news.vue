@@ -18,7 +18,9 @@ export default {
             `https://api.rss2json.com/v1/api.json?rss_url=http://feeds.bbci.co.uk/sport/football/rss.xml?edition=uk`
         )
 
-        this.news = feed.items
+        this.news = feed.items.sort((a, b) =>
+            this.$dayjs(a.pubDate).isBefore(this.$dayjs(b.pubDate)) ? 1 : -1
+        )
     },
     fetchOnServer: false,
     computed: {
