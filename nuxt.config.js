@@ -1,12 +1,18 @@
 import range from 'lodash/range'
 
+const meta = {
+    title: `footytext`,
+    description: `Read football news, view past and present English Premier League tables and check live scores in a nostalgic teletext/ceefax recreation!`,
+    image: `/screenshot.png`,
+}
+
 export default {
     // Target: https://go.nuxtjs.dev/config-target
     target: 'static',
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        title: 'footytext',
+        title: meta.title,
         meta: [
             { charset: 'utf-8' },
             {
@@ -16,8 +22,52 @@ export default {
             {
                 hid: 'description',
                 name: 'description',
-                content:
-                    'View past and present English Premier League tables in a nostalgic teletext/ceefax recreation!',
+                content: meta.description,
+            },
+            {
+                hid: 'twitter:title',
+                name: 'twitter:title',
+                content: meta.title,
+            },
+            {
+                hid: 'twitter:description',
+                name: 'twitter:description',
+                content: meta.description,
+            },
+            {
+                hid: 'twitter:image',
+                name: 'twitter:image',
+                content: meta.image,
+            },
+            {
+                hid: 'twitter:image:alt',
+                name: 'twitter:image:alt',
+                content: meta.title,
+            },
+            {
+                hid: 'og:title',
+                property: 'og:title',
+                content: meta.title,
+            },
+            {
+                hid: 'og:description',
+                property: 'og:description',
+                content: meta.description,
+            },
+            {
+                hid: 'og:image',
+                property: 'og:image',
+                content: meta.image,
+            },
+            {
+                hid: 'og:image:secure_url',
+                property: 'og:image:secure_url',
+                content: meta.image,
+            },
+            {
+                hid: 'og:image:alt',
+                property: 'og:image:alt',
+                content: meta.title,
             },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

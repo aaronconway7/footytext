@@ -1,15 +1,16 @@
 <template lang="pug">
     footer
         div.strip.bluebg
-            p.yellow Created by #[a(href="https://aaronconway.co.uk" target="_blank") Aaron Conway]
+            p.yellow Created by #[a(href="https://aaronconway.co.uk" target="_blank" rel="noopener") Aaron Conway]
         ul
             li.red
                 NuxtLink(to="/news") News
             li.green
-                NuxtLink(to="/pl/1992") Premier League
+                NuxtLink(to="/pl") Premier League
             li.yellow
                 NuxtLink(to="/euro") Euro 2020
-            li.blue Sport
+            li.blue
+                a(href="https://www.buymeacoffee.com/aaronconway7" target="_blank" rel="noopener") Donate
 </template>
 
 <script>

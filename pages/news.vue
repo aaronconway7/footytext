@@ -5,9 +5,9 @@
     div(v-else)
         ul
             li.white.headline
-                a(:href="mainHeadline.link" target="_blank") {{ mainHeadline.title }}
+                a(:href="mainHeadline.link" target="_blank" rel="noopener") {{ mainHeadline.title }}
             li(v-for="(n, i) in subNews" :key="i")
-                a(:href="n.link" target="_blank") {{ n.title }}
+                a(:href="n.link" target="_blank" rel="noopener") {{ n.title }}
 </div>
 </template>
 
