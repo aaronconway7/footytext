@@ -104,7 +104,10 @@ export default {
     build: {},
 
     generate: {
-        routes: range(1992, new Date().getFullYear()).map((y) => `/pl/${y}`),
+        routes: [
+            `/pl`,
+            ...range(1992, new Date().getFullYear()).map((y) => `/pl/${y}`),
+        ],
         fallback: true,
     },
 }
