@@ -1,8 +1,8 @@
 <script>
 export default {
     middleware: [
-        function ({ redirect }) {
-            const year = this.$dayjs().format(`YYYY`)
+        function ({ redirect, $dayjs }) {
+            const year = $dayjs().format(`YYYY`)
             redirect(`/pl/${Number(year) - 1}`)
         },
     ],
