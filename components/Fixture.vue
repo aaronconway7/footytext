@@ -1,18 +1,10 @@
 <template lang="pug">
     tr
         td.cyan.team-name {{ fixture.teams.home.name }}
-            ul.white
-                li(v-for="goal in homeGoals") {{ goal.player.name }} {{ detailLookup[goal.detail] }} {{ goal.time.elapsed }}
-            ul.red.sent-off(v-if="homeSendingOffs.length > 0")
-                li Sent off:
-                li(v-for="sendingOff in homeSendingOffs") {{ sendingOff.player.name }} {{ sendingOff.time.elapsed }}
+            TeamEvents(:events="homeEvents")
         td {{ Number.isInteger(fixture.goals.home) && Number.isInteger(fixture.goals.away) ? `${fixture.goals.home}-${fixture.goals.away}` : `v` }}
         td.cyan.team-name {{ fixture.teams.away.name }}
-            ul.white
-                li(v-for="goal in awayGoals") {{ goal.player.name }} {{ detailLookup[goal.detail] }} {{ goal.time.elapsed }}
-            ul.red.sent-off(v-if="awaySendingOffs.length > 0")
-                li Sent off:
-                li(v-for="sendingOff in awaySendingOffs") {{ sendingOff.player.name }} {{ sendingOff.time.elapsed }}
+            TeamEvents(:events="awayEvents")
         td.status {{ fixture.fixture.status.short === `NS` ? getKickOffTime(fixture.fixture.date) : fixture.fixture.status.short }}
 </template>
 
@@ -27,11 +19,6 @@ export default {
     data() {
         return {
             events: [],
-            detailLookup: {
-                Penalty: `pen`,
-                'Own Goal': `og`,
-            },
-            validSendingOff: [`Second Yellow card`, `Red card`],
         }
     },
     computed: {
@@ -43,28 +30,6 @@ export default {
         awayEvents() {
             return this.events.filter(
                 (e) => e.team.id === this.fixture.teams.away.id
-            )
-        },
-        homeGoals() {
-            return this.homeEvents.filter(
-                (e) => e.type === `Goal` && e.detail !== `Missed Penalty`
-            )
-        },
-        awayGoals() {
-            return this.awayEvents.filter(
-                (e) => e.type === `Goal` && e.detail !== `Missed Penalty`
-            )
-        },
-        homeSendingOffs() {
-            return this.homeEvents.filter(
-                (e) =>
-                    e.type === `Card` && this.validSendingOff.includes(e.detail)
-            )
-        },
-        awaySendingOffs() {
-            return this.awayEvents.filter(
-                (e) =>
-                    e.type === `Card` && this.validSendingOff.includes(e.detail)
             )
         },
     },
@@ -107,11 +72,4 @@ tr
 
 .team-name
     text-transform: uppercase
-
-ul
-    list-style-type: none
-    text-transform: initial
-
-    &.sent-off
-        margin-top: 1em
 </style>
