@@ -1,11 +1,11 @@
 <template lang="pug">
     header
         div.bar
-            span.white P{{ $route.params.season || 100 }}
-            span.white CEEFAX {{ dailyRequestsRemaining }}
+            span.white.page P{{ $route.params.season || 100 }}
+            span.white.daily-requests-remaining CEEFAX {{ dailyRequestsRemaining }}
             span.white AC7
-            span.white {{ date }}
-            span.yellow {{ time }}
+            span.white.date {{ date }}
+            span.yellow.time {{ time }}
         div.banner
             div.bbc
                 <span>&#xe22a;&#xe203;&#xe213;&#xe22b;&#xe22a;&#xe203;&#xe213;&#xe22b;&#xe22a;&#xe203;&#xe213;&#xe22b;</span>
