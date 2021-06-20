@@ -16,7 +16,7 @@ export default {
                 Penalty: `pen`,
                 'Own Goal': `og`,
             },
-            validSendingOff: [`Second Yellow card`, `Red card`],
+            validSendingOff: [`Second Yellow Card`, `Red Card`],
         }
     },
     computed: {
