@@ -18,8 +18,9 @@ export const actions = {
                 },
             }
         )
-        const requests = await data.response.requests.current
-        const remaining = requests > 100 ? 0 : 100 - requests
+        const requests = data.response.requests.current
+        const limit = data.response.requests.limit_day
+        const remaining = requests > limit ? 0 : limit - requests
         commit(`setDailyRequestsRemaining`, remaining)
     },
 }

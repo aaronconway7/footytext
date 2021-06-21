@@ -100,6 +100,10 @@ export default {
         },
     },
 
+    dayjs: {
+        plugins: ['isToday'],
+    },
+
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},
 
