@@ -22,6 +22,7 @@ export default {
 <style lang="scss">
 :root {
     --small-screen: 500px;
+    --width: 750px;
 }
 
 .teletext__container {
@@ -30,7 +31,10 @@ export default {
     grid-gap: 20px;
     margin: auto;
     min-height: 30rem;
-    width: max-content;
+    width: var(--width);
+    /* width: max-content;
     min-width: 700px;
+    max-width: 850px; */
+    /* width: 700px; */
 }
 </style>

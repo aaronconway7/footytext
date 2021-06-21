@@ -27,7 +27,7 @@
     },
     {
         "rank": 3,
-        "team": { "id": 3, "name": "Manchester United" },
+        "team": { "id": 3, "name": "Man Utd" },
         "goalsDiff": "+29",
         "points": 75,
         "all": {
@@ -53,7 +53,7 @@
     },
     {
         "rank": 5,
-        "team": { "id": 5, "name": "Newcastle United" },
+        "team": { "id": 5, "name": "Newcastle Utd" },
         "goalsDiff": "+12",
         "points": 56,
         "all": {
@@ -79,7 +79,7 @@
     },
     {
         "rank": 7,
-        "team": { "id": 7, "name": "Charlton Athletic" },
+        "team": { "id": 7, "name": "Charlton" },
         "goalsDiff": 0,
         "points": 53,
         "all": {
@@ -92,7 +92,7 @@
     },
     {
         "rank": 8,
-        "team": { "id": 8, "name": "Bolton Wanderers" },
+        "team": { "id": 8, "name": "Bolton" },
         "goalsDiff": -8,
         "points": 53,
         "all": {
@@ -170,7 +170,7 @@
     },
     {
         "rank": 14,
-        "team": { "id": 14, "name": "Tottenham Hotspur" },
+        "team": { "id": 14, "name": "Tottenham" },
         "goalsDiff": -10,
         "points": 45,
         "all": {
@@ -183,7 +183,7 @@
     },
     {
         "rank": 15,
-        "team": { "id": 15, "name": "Blackburn Rovers" },
+        "team": { "id": 15, "name": "Blackburn" },
         "goalsDiff": -8,
         "points": 44,
         "all": {
@@ -196,7 +196,7 @@
     },
     {
         "rank": 16,
-        "team": { "id": 16, "name": "Manchester City" },
+        "team": { "id": 16, "name": "Man City" },
         "goalsDiff": "+1",
         "points": 41,
         "all": {
@@ -235,7 +235,7 @@
     },
     {
         "rank": 19,
-        "team": { "id": 19, "name": "Leeds United" },
+        "team": { "id": 19, "name": "Leeds Utd" },
         "goalsDiff": -39,
         "points": 33,
         "all": {
@@ -248,7 +248,7 @@
     },
     {
         "rank": 20,
-        "team": { "id": 20, "name": "Wolverhampton Wanderers" },
+        "team": { "id": 20, "name": "Wolves" },
         "goalsDiff": -39,
         "points": 33,
         "all": {

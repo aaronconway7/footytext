@@ -1,7 +1,7 @@
 [
     {
         "rank": 1,
-        "team": { "id": 1, "name": "Manchester United" },
+        "team": { "id": 1, "name": "Man Utd" },
         "goalsDiff": 42,
         "points": 92,
         "all": {
@@ -14,7 +14,7 @@
     },
     {
         "rank": 2,
-        "team": { "id": 2, "name": "Blackburn Rovers" },
+        "team": { "id": 2, "name": "Blackburn" },
         "goalsDiff": 27,
         "points": 84,
         "all": {
@@ -27,7 +27,7 @@
     },
     {
         "rank": 3,
-        "team": { "id": 3, "name": "Newcastle United" },
+        "team": { "id": 3, "name": "Newcastle Utd" },
         "goalsDiff": 41,
         "points": 77,
         "all": {
@@ -53,7 +53,7 @@
     },
     {
         "rank": 5,
-        "team": { "id": 5, "name": "Leeds United" },
+        "team": { "id": 5, "name": "Leeds Utd" },
         "goalsDiff": 26,
         "points": 70,
         "all": {
@@ -79,7 +79,7 @@
     },
     {
         "rank": 7,
-        "team": { "id": 7, "name": "Sheffield Wednesday" },
+        "team": { "id": 7, "name": "Sheffield Wed" },
         "goalsDiff": 22,
         "points": 64,
         "all": {
@@ -105,7 +105,7 @@
     },
     {
         "rank": 9,
-        "team": { "id": 9, "name": "Queens Park Rangers" },
+        "team": { "id": 9, "name": "QPR" },
         "goalsDiff": 1,
         "points": 60,
         "all": {
@@ -157,7 +157,7 @@
     },
     {
         "rank": 13,
-        "team": { "id": 13, "name": "West Ham United" },
+        "team": { "id": 13, "name": "West Ham Utd" },
         "goalsDiff": -11,
         "points": 52,
         "all": {
@@ -183,7 +183,7 @@
     },
     {
         "rank": 15,
-        "team": { "id": 15, "name": "Tottenham Hotspur" },
+        "team": { "id": 15, "name": "Tottenham" },
         "goalsDiff": -5,
         "points": 45,
         "all": {
@@ -196,7 +196,7 @@
     },
     {
         "rank": 16,
-        "team": { "id": 16, "name": "Manchester City" },
+        "team": { "id": 16, "name": "Man City" },
         "goalsDiff": -11,
         "points": 45,
         "all": {
@@ -248,7 +248,7 @@
     },
     {
         "rank": 20,
-        "team": { "id": 20, "name": "Sheffield United" },
+        "team": { "id": 20, "name": "Sheffield Utd" },
         "goalsDiff": -18,
         "points": 42,
         "all": {

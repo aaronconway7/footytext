@@ -1,7 +1,7 @@
 [
     {
         "rank": 1,
-        "team": { "id": 1, "name": "Manchester United" },
+        "team": { "id": 1, "name": "Man Utd" },
         "goalsDiff": "+44",
         "points": 90,
         "all": {
@@ -92,7 +92,7 @@
     },
     {
         "rank": 8,
-        "team": { "id": 8, "name": "Tottenham Hotspur" },
+        "team": { "id": 8, "name": "Tottenham" },
         "goalsDiff": 0,
         "points": 51,
         "all": {
@@ -105,7 +105,7 @@
     },
     {
         "rank": 9,
-        "team": { "id": 9, "name": "West Ham United" },
+        "team": { "id": 9, "name": "West Ham Utd" },
         "goalsDiff": -3,
         "points": 51,
         "all": {
@@ -118,7 +118,7 @@
     },
     {
         "rank": 10,
-        "team": { "id": 10, "name": "Manchester City" },
+        "team": { "id": 10, "name": "Man City" },
         "goalsDiff": "+8",
         "points": 50,
         "all": {
@@ -157,7 +157,7 @@
     },
     {
         "rank": 13,
-        "team": { "id": 13, "name": "Bolton Wanderers" },
+        "team": { "id": 13, "name": "Bolton" },
         "goalsDiff": -12,
         "points": 41,
         "all": {
@@ -183,7 +183,7 @@
     },
     {
         "rank": 15,
-        "team": { "id": 15, "name": "Blackburn Rovers" },
+        "team": { "id": 15, "name": "Blackburn" },
         "goalsDiff": -20,
         "points": 41,
         "all": {
@@ -222,7 +222,7 @@
     },
     {
         "rank": 18,
-        "team": { "id": 18, "name": "Newcastle United" },
+        "team": { "id": 18, "name": "Newcastle Utd" },
         "goalsDiff": -19,
         "points": 34,
         "all": {
@@ -248,7 +248,7 @@
     },
     {
         "rank": 20,
-        "team": { "id": 20, "name": "West Bromwich Albion" },
+        "team": { "id": 20, "name": "West Brom" },
         "goalsDiff": -31,
         "points": 32,
         "all": {

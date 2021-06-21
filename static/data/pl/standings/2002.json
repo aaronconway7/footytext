@@ -1,7 +1,7 @@
 [
     {
         "rank": 1,
-        "team": { "id": 1, "name": "Manchester United" },
+        "team": { "id": 1, "name": "Man Utd" },
         "goalsDiff": 40,
         "points": 83,
         "all": {
@@ -27,7 +27,7 @@
     },
     {
         "rank": 3,
-        "team": { "id": 3, "name": "Newcastle United" },
+        "team": { "id": 3, "name": "Newcastle Utd" },
         "goalsDiff": 15,
         "points": "*69*",
         "all": {
@@ -66,7 +66,7 @@
     },
     {
         "rank": 6,
-        "team": { "id": 6, "name": "Blackburn Rovers" },
+        "team": { "id": 6, "name": "Blackburn" },
         "goalsDiff": 9,
         "points": "*60*",
         "all": {
@@ -105,7 +105,7 @@
     },
     {
         "rank": 9,
-        "team": { "id": 9, "name": "Manchester City" },
+        "team": { "id": 9, "name": "Man City" },
         "goalsDiff": -7,
         "points": "*51*",
         "all": {
@@ -118,7 +118,7 @@
     },
     {
         "rank": 10,
-        "team": { "id": 10, "name": "Tottenham Hotspur" },
+        "team": { "id": 10, "name": "Tottenham" },
         "goalsDiff": -11,
         "points": "*50*",
         "all": {
@@ -144,7 +144,7 @@
     },
     {
         "rank": 12,
-        "team": { "id": 12, "name": "Charlton Athletic" },
+        "team": { "id": 12, "name": "Charlton" },
         "goalsDiff": -11,
         "points": "*49*",
         "all": {
@@ -183,7 +183,7 @@
     },
     {
         "rank": 15,
-        "team": { "id": 15, "name": "Leeds United" },
+        "team": { "id": 15, "name": "Leeds Utd" },
         "goalsDiff": 1,
         "points": "*47*",
         "all": {
@@ -209,7 +209,7 @@
     },
     {
         "rank": 17,
-        "team": { "id": 17, "name": "Bolton Wanderers" },
+        "team": { "id": 17, "name": "Bolton" },
         "goalsDiff": -10,
         "points": "*44*",
         "all": {
@@ -222,7 +222,7 @@
     },
     {
         "rank": 18,
-        "team": { "id": 18, "name": "West Ham United" },
+        "team": { "id": 18, "name": "West Ham Utd" },
         "goalsDiff": -17,
         "points": "*42*",
         "all": {
@@ -235,7 +235,7 @@
     },
     {
         "rank": 19,
-        "team": { "id": 19, "name": "West Bromwich Albion" },
+        "team": { "id": 19, "name": "West Brom" },
         "goalsDiff": -36,
         "points": "*26*",
         "all": {

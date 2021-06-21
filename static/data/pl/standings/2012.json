@@ -1,7 +1,7 @@
 [
     {
         "rank": 1,
-        "team": { "id": 1, "name": "Manchester United" },
+        "team": { "id": 1, "name": "Man Utd" },
         "goalsDiff": "+43",
         "points": 89,
         "all": {
@@ -14,7 +14,7 @@
     },
     {
         "rank": 2,
-        "team": { "id": 2, "name": "Manchester City" },
+        "team": { "id": 2, "name": "Man City" },
         "goalsDiff": "+32",
         "points": 78,
         "all": {
@@ -53,7 +53,7 @@
     },
     {
         "rank": 5,
-        "team": { "id": 5, "name": "Tottenham Hotspur" },
+        "team": { "id": 5, "name": "Tottenham" },
         "goalsDiff": "+20",
         "points": 72,
         "all": {
@@ -92,7 +92,7 @@
     },
     {
         "rank": 8,
-        "team": { "id": 8, "name": "West Bromwich Albion" },
+        "team": { "id": 8, "name": "West Brom" },
         "goalsDiff": -4,
         "points": 49,
         "all": {
@@ -118,7 +118,7 @@
     },
     {
         "rank": 10,
-        "team": { "id": 10, "name": "West Ham United" },
+        "team": { "id": 10, "name": "West Ham Utd" },
         "goalsDiff": -8,
         "points": 46,
         "all": {
@@ -196,7 +196,7 @@
     },
     {
         "rank": 16,
-        "team": { "id": 16, "name": "Newcastle United" },
+        "team": { "id": 16, "name": "Newcastle Utd" },
         "goalsDiff": -23,
         "points": 41,
         "all": {
@@ -248,7 +248,7 @@
     },
     {
         "rank": 20,
-        "team": { "id": 20, "name": "Queens Park Rangers" },
+        "team": { "id": 20, "name": "QPR" },
         "goalsDiff": -30,
         "points": 25,
         "all": {

@@ -46,7 +46,7 @@ ul
 
 li
     text-overflow: ellipsis
-    max-width: 700px
+    max-width: var(--width)
     white-space: nowrap
     overflow: hidden
 </style>

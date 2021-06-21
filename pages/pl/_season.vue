@@ -2,7 +2,7 @@
 <div>
     h2.green.table-title {{ name }} Table
         select.season-select.blackbg.green(name="season" @change="handleSeasonSelect")
-            option(v-for="s in seasons" :value="s" :selected="season === s") {{ s }}/{{ (s + 1).toString().substring(2) }}
+            option(v-for="s in seasons" :value="s" :selected="season === s") {{ getSeasonString(s) }}
     p(v-if="standings.length === 0") We've run out of daily API requests :(
     table(v-else)
         thead
@@ -19,7 +19,7 @@
                 td PTS
         tbody
             tr(v-for="s in standings" :key="s.team.id" :class="{ cyan: s.rank % 2 === 0 }")
-                td {{ s.rank }}
+                td #[span.green {{ seasonFinished && s.rank === 1 ? `C` : `` }}] {{ s.rank }}
                 td.team-name {{ s.team.name }}
                 td {{ s.all.played }}
                 td {{ s.all.win }}
@@ -29,6 +29,8 @@
                 td {{ s.all.goals.against }}
                 td {{ s.goalsDiff }}
                 td {{ s.points }}
+    
+    p.champions.green(v-if="seasonFinished") {{ champions.team.name }} are the Premier League Champions {{ getSeasonString(this.season) }}
 </div>
 </template>
 
@@ -54,48 +56,59 @@ export default {
         handleSeasonSelect(e) {
             this.$router.push(e.target.value)
         },
+        getSeasonString(year) {
+            return `${year}/${(year + 1).toString().substring(2)}`
+        },
+    },
+    computed: {
+        champions() {
+            return this.standings.find((t) => t.rank === 1)
+        },
+        seasonFinished() {
+            const maxPlayed = (this.standings.length - 1) * 2
+
+            if (this.standings[0].all.played === maxPlayed) return true
+            return false
+        },
     },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="sass" scoped>
 .table-title,
-.season-select {
-    font-weight: 100;
-    font-size: 24px;
-    letter-spacing: 2px;
-}
+.season-select
+    font-weight: 100
+    font-size: 24px
+    letter-spacing: 2px
 
-.table-title {
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
+.table-title
+    text-transform: uppercase
+    margin-bottom: 20px
 
-.season-select {
-    font-family: inherit;
-    margin-left: 1em;
-    border: none;
-    cursor: pointer;
-}
+.season-select
+    font-family: inherit
+    margin-left: 1em
+    border: none
+    cursor: pointer
 
-table {
-    thead {
-        td {
-            padding-bottom: 20px;
-            text-align: center;
-        }
-    }
+table
+    thead
+        td
+            padding-bottom: 20px
+            text-align: center
 
-    td {
-        padding: 2px 8px;
-    }
+    td
+        padding: 2px 8px
 
-    tbody {
-        td {
-            &:not(.team-name) {
-                text-align: right;
-            }
-        }
-    }
-}
+    tbody
+        td
+            &:not(.team-name)
+                text-align: right
+
+.champions
+    text-transform: uppercase
+    margin: 2em 0 1em 0
+    text-align: center
+    white-space: initial
+    line-height: 1.5em
 </style>

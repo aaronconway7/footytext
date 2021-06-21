@@ -1,7 +1,7 @@
 [
     {
         "rank": 1,
-        "team": { "id": 1, "name": "Manchester United" },
+        "team": { "id": 1, "name": "Man Utd" },
         "goalsDiff": "+41",
         "points": 80,
         "all": {
@@ -27,7 +27,7 @@
     },
     {
         "rank": 3,
-        "team": { "id": 3, "name": "Manchester City" },
+        "team": { "id": 3, "name": "Man City" },
         "goalsDiff": "+27",
         "points": 71,
         "all": {
@@ -53,7 +53,7 @@
     },
     {
         "rank": 5,
-        "team": { "id": 5, "name": "Tottenham Hotspur" },
+        "team": { "id": 5, "name": "Tottenham" },
         "goalsDiff": "+9",
         "points": 62,
         "all": {
@@ -131,7 +131,7 @@
     },
     {
         "rank": 11,
-        "team": { "id": 11, "name": "West Bromwich Albion" },
+        "team": { "id": 11, "name": "West Brom" },
         "goalsDiff": -15,
         "points": 47,
         "all": {
@@ -144,7 +144,7 @@
     },
     {
         "rank": 12,
-        "team": { "id": 12, "name": "Newcastle United" },
+        "team": { "id": 12, "name": "Newcastle Utd" },
         "goalsDiff": -1,
         "points": 46,
         "all": {
@@ -170,7 +170,7 @@
     },
     {
         "rank": 14,
-        "team": { "id": 14, "name": "Bolton Wanderers" },
+        "team": { "id": 14, "name": "Bolton" },
         "goalsDiff": -4,
         "points": 46,
         "all": {
@@ -183,7 +183,7 @@
     },
     {
         "rank": 15,
-        "team": { "id": 15, "name": "Blackburn Rovers" },
+        "team": { "id": 15, "name": "Blackburn" },
         "goalsDiff": -13,
         "points": 43,
         "all": {
@@ -209,7 +209,7 @@
     },
     {
         "rank": 17,
-        "team": { "id": 17, "name": "Wolverhampton Wanderers" },
+        "team": { "id": 17, "name": "Wolves" },
         "goalsDiff": -20,
         "points": 40,
         "all": {
@@ -248,7 +248,7 @@
     },
     {
         "rank": 20,
-        "team": { "id": 20, "name": "West Ham United" },
+        "team": { "id": 20, "name": "West Ham Utd" },
         "goalsDiff": -27,
         "points": 33,
         "all": {

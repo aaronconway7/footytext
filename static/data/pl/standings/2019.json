@@ -39,7 +39,7 @@
         "rank": 2,
         "team": {
             "id": 50,
-            "name": "Manchester City",
+            "name": "Man City",
             "logo": "https://media.api-sports.io/football/teams/50.png"
         },
         "points": 81,
@@ -75,7 +75,7 @@
         "rank": 3,
         "team": {
             "id": 33,
-            "name": "Manchester United",
+            "name": "Man Utd",
             "logo": "https://media.api-sports.io/football/teams/33.png"
         },
         "points": 66,

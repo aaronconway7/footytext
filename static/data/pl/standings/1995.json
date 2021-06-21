@@ -1,7 +1,7 @@
 [
     {
         "rank": 1,
-        "team": { "id": 1, "name": "Manchester United" },
+        "team": { "id": 1, "name": "Man Utd" },
         "goalsDiff": 38,
         "points": 82,
         "all": {
@@ -14,7 +14,7 @@
     },
     {
         "rank": 2,
-        "team": { "id": 2, "name": "Newcastle United" },
+        "team": { "id": 2, "name": "Newcastle Utd" },
         "goalsDiff": 29,
         "points": 78,
         "all": {
@@ -79,7 +79,7 @@
     },
     {
         "rank": 7,
-        "team": { "id": 7, "name": "Blackburn Rovers" },
+        "team": { "id": 7, "name": "Blackburn" },
         "goalsDiff": 14,
         "points": 61,
         "all": {
@@ -92,7 +92,7 @@
     },
     {
         "rank": 8,
-        "team": { "id": 8, "name": "Tottenham Hotspur" },
+        "team": { "id": 8, "name": "Tottenham" },
         "goalsDiff": 12,
         "points": 61,
         "all": {
@@ -105,7 +105,7 @@
     },
     {
         "rank": 9,
-        "team": { "id": 9, "name": "Nottingham Forest" },
+        "team": { "id": 9, "name": "Nottm Forest" },
         "goalsDiff": -4,
         "points": 58,
         "all": {
@@ -118,7 +118,7 @@
     },
     {
         "rank": 10,
-        "team": { "id": 10, "name": "West Ham United" },
+        "team": { "id": 10, "name": "West Ham Utd" },
         "goalsDiff": -9,
         "points": 51,
         "all": {
@@ -157,7 +157,7 @@
     },
     {
         "rank": 13,
-        "team": { "id": 13, "name": "Leeds United" },
+        "team": { "id": 13, "name": "Leeds Utd" },
         "goalsDiff": -17,
         "points": 43,
         "all": {
@@ -183,7 +183,7 @@
     },
     {
         "rank": 15,
-        "team": { "id": 15, "name": "Sheffield Wednesday" },
+        "team": { "id": 15, "name": "Sheffield Wed" },
         "goalsDiff": -13,
         "points": 40,
         "all": {
@@ -222,7 +222,7 @@
     },
     {
         "rank": 18,
-        "team": { "id": 18, "name": "Manchester City" },
+        "team": { "id": 18, "name": "Man City" },
         "goalsDiff": -25,
         "points": 38,
         "all": {
@@ -235,7 +235,7 @@
     },
     {
         "rank": 19,
-        "team": { "id": 19, "name": "Queens Park Rangers" },
+        "team": { "id": 19, "name": "QPR" },
         "goalsDiff": -19,
         "points": 33,
         "all": {
@@ -248,7 +248,7 @@
     },
     {
         "rank": 20,
-        "team": { "id": 20, "name": "Bolton Wanderers" },
+        "team": { "id": 20, "name": "Bolton" },
         "goalsDiff": -32,
         "points": 29,
         "all": {

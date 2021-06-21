@@ -1,7 +1,7 @@
 [
     {
         "rank": 1,
-        "team": { "id": 1, "name": "Manchester City" },
+        "team": { "id": 1, "name": "Man City" },
         "goalsDiff": "+65",
         "points": 86,
         "all": {
@@ -66,7 +66,7 @@
     },
     {
         "rank": 6,
-        "team": { "id": 6, "name": "Tottenham Hotspur" },
+        "team": { "id": 6, "name": "Tottenham" },
         "goalsDiff": "+4",
         "points": 69,
         "all": {
@@ -79,7 +79,7 @@
     },
     {
         "rank": 7,
-        "team": { "id": 7, "name": "Manchester United" },
+        "team": { "id": 7, "name": "Man Utd" },
         "goalsDiff": "+21",
         "points": 64,
         "all": {
@@ -118,7 +118,7 @@
     },
     {
         "rank": 10,
-        "team": { "id": 10, "name": "Newcastle United" },
+        "team": { "id": 10, "name": "Newcastle Utd" },
         "goalsDiff": -16,
         "points": 49,
         "all": {
@@ -157,7 +157,7 @@
     },
     {
         "rank": 13,
-        "team": { "id": 13, "name": "West Ham United" },
+        "team": { "id": 13, "name": "West Ham Utd" },
         "goalsDiff": -11,
         "points": 40,
         "all": {
@@ -209,7 +209,7 @@
     },
     {
         "rank": 17,
-        "team": { "id": 17, "name": "West Bromwich Albion" },
+        "team": { "id": 17, "name": "West Brom" },
         "goalsDiff": -16,
         "points": 36,
         "all": {

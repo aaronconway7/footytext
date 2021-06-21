@@ -1,7 +1,7 @@
 [
     {
         "rank": 1,
-        "team": { "id": 1, "name": "Manchester United" },
+        "team": { "id": 1, "name": "Man Utd" },
         "goalsDiff": 36,
         "points": 84,
         "all": {
@@ -40,7 +40,7 @@
     },
     {
         "rank": 4,
-        "team": { "id": 4, "name": "Blackburn Rovers" },
+        "team": { "id": 4, "name": "Blackburn" },
         "goalsDiff": 22,
         "points": 71,
         "all": {
@@ -53,7 +53,7 @@
     },
     {
         "rank": 5,
-        "team": { "id": 5, "name": "Queens Park Rangers" },
+        "team": { "id": 5, "name": "QPR" },
         "goalsDiff": 8,
         "points": 63,
         "all": {
@@ -79,7 +79,7 @@
     },
     {
         "rank": 7,
-        "team": { "id": 7, "name": "Sheffield Wednesday" },
+        "team": { "id": 7, "name": "Sheffield Wed" },
         "goalsDiff": 4,
         "points": 59,
         "all": {
@@ -92,7 +92,7 @@
     },
     {
         "rank": 8,
-        "team": { "id": 8, "name": "Tottenham Hotspur" },
+        "team": { "id": 8, "name": "Tottenham" },
         "goalsDiff": -6,
         "points": 59,
         "all": {
@@ -105,7 +105,7 @@
     },
     {
         "rank": 9,
-        "team": { "id": 9, "name": "Manchester City" },
+        "team": { "id": 9, "name": "Man City" },
         "goalsDiff": 5,
         "points": 57,
         "all": {
@@ -170,7 +170,7 @@
     },
     {
         "rank": 14,
-        "team": { "id": 14, "name": "Sheffield United" },
+        "team": { "id": 14, "name": "Sheffield Utd" },
         "goalsDiff": 1,
         "points": 52,
         "all": {
@@ -209,7 +209,7 @@
     },
     {
         "rank": 17,
-        "team": { "id": 17, "name": "Leeds United" },
+        "team": { "id": 17, "name": "Leeds Utd" },
         "goalsDiff": -5,
         "points": 51,
         "all": {
@@ -274,7 +274,7 @@
     },
     {
         "rank": 22,
-        "team": { "id": 22, "name": "Nottingham Forest" },
+        "team": { "id": 22, "name": "Nottm Forest" },
         "goalsDiff": -21,
         "points": 40,
         "all": {
