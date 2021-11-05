@@ -105,7 +105,7 @@
     },
     {
         "rank": 9,
-        "team": { "id": 9, "name": "Leicester City" },
+        "team": { "id": 9, "name": "Leicester C" },
         "goalsDiff": -8,
         "points": 47,
         "all": {
@@ -157,7 +157,7 @@
     },
     {
         "rank": 13,
-        "team": { "id": 13, "name": "Blackburn" },
+        "team": { "id": 13, "name": "Blackburn R" },
         "goalsDiff": -1,
         "points": 42,
         "all": {

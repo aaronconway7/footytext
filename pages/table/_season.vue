@@ -40,15 +40,30 @@ import range from 'lodash/range'
 export default {
     data() {
         return {
-            seasons: range(1992, new Date().getFullYear()),
+            seasons: range(1992, 2022),
             name: `Premier League`,
             season: Number(this.$route.params.season),
         }
     },
     async asyncData({ params, $http }) {
-        const standings = await $http.$get(
-            `/data/pl/standings/${params.season}.json`
-        )
+        let standings
+
+        try {
+            standings = await $http.$get(
+                `/data/pl/standings/${params.season}.json`
+            )
+        } catch {
+            const data = await $http.$get(
+                `https://v3.football.api-sports.io/standings?league=39&season=${params.season}`,
+                {
+                    headers: {
+                        'x-apisports-key':
+                            process.env.NUXT_ENV_API_FOOTBALL_KEY,
+                    },
+                }
+            )
+            standings = (await data.response[0]?.league?.standings[0]) || []
+        }
 
         return { standings }
     },
@@ -67,7 +82,7 @@ export default {
         seasonFinished() {
             const maxPlayed = (this.standings.length - 1) * 2
 
-            if (this.standings[0].all.played === maxPlayed) return true
+            if (this.standings[0]?.all.played === maxPlayed) return true
             return false
         },
     },

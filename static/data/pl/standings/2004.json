@@ -144,7 +144,7 @@
     },
     {
         "rank": 12,
-        "team": { "id": 12, "name": "Birmingham City" },
+        "team": { "id": 12, "name": "Birmingham C" },
         "goalsDiff": -6,
         "points": 45,
         "all": {
@@ -183,7 +183,7 @@
     },
     {
         "rank": 15,
-        "team": { "id": 15, "name": "Blackburn" },
+        "team": { "id": 15, "name": "Blackburn R" },
         "goalsDiff": -11,
         "points": 42,
         "all": {

@@ -118,7 +118,7 @@
     },
     {
         "rank": 10,
-        "team": { "id": 10, "name": "Birmingham City" },
+        "team": { "id": 10, "name": "Birmingham C" },
         "goalsDiff": -5,
         "points": 50,
         "all": {
@@ -183,7 +183,7 @@
     },
     {
         "rank": 15,
-        "team": { "id": 15, "name": "Blackburn" },
+        "team": { "id": 15, "name": "Blackburn R" },
         "goalsDiff": -8,
         "points": 44,
         "all": {
@@ -222,7 +222,7 @@
     },
     {
         "rank": 18,
-        "team": { "id": 18, "name": "Leicester City" },
+        "team": { "id": 18, "name": "Leicester C" },
         "goalsDiff": -17,
         "points": 33,
         "all": {

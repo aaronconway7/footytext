@@ -183,7 +183,7 @@
     },
     {
         "rank": 15,
-        "team": { "id": 15, "name": "Wigan Athletic" },
+        "team": { "id": 15, "name": "Wigan Ath" },
         "goalsDiff": -20,
         "points": 43,
         "all": {
@@ -235,7 +235,7 @@
     },
     {
         "rank": 19,
-        "team": { "id": 19, "name": "Blackburn" },
+        "team": { "id": 19, "name": "Blackburn R" },
         "goalsDiff": -30,
         "points": 31,
         "all": {

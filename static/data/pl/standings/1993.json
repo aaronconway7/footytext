@@ -14,7 +14,7 @@
     },
     {
         "rank": 2,
-        "team": { "id": 2, "name": "Blackburn" },
+        "team": { "id": 2, "name": "Blackburn R" },
         "goalsDiff": 27,
         "points": 84,
         "all": {
@@ -261,7 +261,7 @@
     },
     {
         "rank": 21,
-        "team": { "id": 21, "name": "Oldham Athletic" },
+        "team": { "id": 21, "name": "Oldham Ath" },
         "goalsDiff": -26,
         "points": 40,
         "all": {

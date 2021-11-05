@@ -1,6 +1,6 @@
 <template lang="pug">
 <div>
-    h2.green.table-title Euro 2020
+    h2.green.table-title Fixtures
         input(type="date" name="date" v-model="date").blackbg.green
     p(v-if="$fetchState.pending") Loading...
     p(v-else-if="$fetchState.error") Error :(
@@ -9,7 +9,7 @@
         p(v-else-if="fixtures.length === 0") No fixtures {{ isToday ? `today` : `on selected date` }}...
         table(v-else)
             tbody
-                Fixture(v-for="f in fixtures" :fixture="f" :key="f.fixture.id")
+                Fixture(v-for="f in orderdFixtures" :fixture="f" :key="f.fixture.id")
 </div>
 </template>
 
@@ -28,11 +28,18 @@ export default {
         isToday() {
             return this.$dayjs(this.date).isToday()
         },
+        orderdFixtures() {
+            return this.fixtures.sort((a, b) =>
+                this.$dayjs(a.fixture.date).isAfter(this.$dayjs(b.fixture.date))
+                    ? 1
+                    : -1
+            )
+        },
     },
     async fetch() {
-        // Get Euro 2020 Fixtures
+        // Premier League = 39
         const data = await this.$http.$get(
-            `https://v3.football.api-sports.io/fixtures?date=${this.date}&league=4&season=2020`,
+            `https://v3.football.api-sports.io/fixtures?date=${this.date}&league=39&season=2021`,
             {
                 headers: {
                     'x-apisports-key': process.env.NUXT_ENV_API_FOOTBALL_KEY,

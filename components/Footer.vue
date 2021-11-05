@@ -6,9 +6,9 @@
             li.red
                 NuxtLink(to="/news") News
             li.green
-                NuxtLink(to="/pl") Premier League
+                NuxtLink(to="/table") Table
             li.yellow
-                NuxtLink(to="/euro") Euro 2020
+                NuxtLink(to="/fixtures") Fixtures
             li.blue
                 a(href="https://www.buymeacoffee.com/aaronconway7" target="_blank" rel="noopener") Donate
 </template>

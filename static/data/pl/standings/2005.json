@@ -66,7 +66,7 @@
     },
     {
         "rank": 6,
-        "team": { "id": 6, "name": "Blackburn" },
+        "team": { "id": 6, "name": "Blackburn R" },
         "goalsDiff": "+9",
         "points": 63,
         "all": {
@@ -118,7 +118,7 @@
     },
     {
         "rank": 10,
-        "team": { "id": 10, "name": "Wigan Athletic" },
+        "team": { "id": 10, "name": "Wigan Ath" },
         "goalsDiff": -7,
         "points": 51,
         "all": {
@@ -222,7 +222,7 @@
     },
     {
         "rank": 18,
-        "team": { "id": 18, "name": "Birmingham City" },
+        "team": { "id": 18, "name": "Birmingham C" },
         "goalsDiff": -22,
         "points": 34,
         "all": {

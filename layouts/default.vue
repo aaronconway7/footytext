@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
 :root {
     --small-screen: 500px;
-    --width: 750px;
+    --width: 700px;
 }
 
 .teletext__container {
