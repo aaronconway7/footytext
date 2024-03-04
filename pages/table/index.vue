@@ -2,7 +2,7 @@
 export default {
     middleware: [
         function ({ redirect }) {
-            redirect(`/table/2021`)
+            redirect(`/table/${new Date().getFullYear() - 1}`)
         },
     ],
 }

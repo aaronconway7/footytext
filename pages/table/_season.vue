@@ -3,67 +3,45 @@
     h2.green.table-title {{ name }} Table
         select.season-select.blackbg.green(name="season" @change="handleSeasonSelect")
             option(v-for="s in seasons" :value="s" :selected="season === s") {{ getSeasonString(s) }}
-    p(v-if="standings.length === 0") We've run out of daily API requests :(
-    table(v-else)
+    table(v-if='standings.length > 0')
         thead
             tr
-                td
-                td
-                td P
-                td W
-                td D
-                td L
-                td F
-                td A
-                td GD
-                td PTS
+                th(v-for="(cell, cellIndex) in standings[0]" :key="cellIndex") {{ cellIndex < 2 ? "" : cellIndex === 2 ? 'P' : cell }}
         tbody
-            tr(v-for="s in standings" :key="s.team.id" :class="{ cyan: s.rank % 2 === 0 }")
-                td #[span.green {{ seasonFinished && s.rank === 1 ? `C` : `` }}] {{ s.rank }}
-                td.team-name {{ s.team.name }}
-                td {{ s.all.played }}
-                td {{ s.all.win }}
-                td {{ s.all.draw }}
-                td {{ s.all.lose }}
-                td {{ s.all.goals.for }}
-                td {{ s.all.goals.against }}
-                td {{ s.goalsDiff }}
-                td {{ s.points }}
+            tr(v-for="(row, rowIndex) in standings.slice(1)" :key="rowIndex" :class="{ cyan: rowIndex % 2 === 0 }")
+                td(v-for="(cell, cellIndex) in row" v-if="cellIndex !== 1" :key="cellIndex" :class="{ green: rowIndex === 0, 'team-name': cellIndex === 2 }") {{ cell }}
     
-    p.champions.green(v-if="seasonFinished") {{ champions.team.name }} are the Premier League Champions {{ getSeasonString(this.season) }}
+    p.champions.green(v-if="seasonFinished") {{ champions }} are the Premier League Champions {{ getSeasonString(this.season) }}
 </div>
 </template>
 
 <script>
 import range from 'lodash/range'
+import { load } from 'cheerio'
 
 export default {
     data() {
         return {
-            seasons: range(1992, 2022),
+            seasons: range(1992, new Date().getFullYear()),
             name: `Premier League`,
             season: Number(this.$route.params.season),
         }
     },
     async asyncData({ params, $http }) {
-        let standings
+        let standings = []
 
-        try {
-            standings = await $http.$get(
-                `/data/pl/standings/${params.season}.json`
-            )
-        } catch {
-            const data = await $http.$get(
-                `https://v3.football.api-sports.io/standings?league=39&season=${params.season}`,
-                {
-                    headers: {
-                        'x-apisports-key':
-                            process.env.NUXT_ENV_API_FOOTBALL_KEY,
-                    },
-                }
-            )
-            standings = (await data.response[0]?.league?.standings[0]) || []
-        }
+        const url = `https://www.transfermarkt.co.uk/premier-league/tabelle/wettbewerb/GB1?saison_id=${params.season}`
+        const data = await $http.$get(url)
+        const $ = load(data)
+
+        const rows = $('.items tr')
+        rows.each((i, row) => {
+            const columns = $(row).find('td, th')
+            const data = columns
+                .map((i, column) => $(column).text().trim())
+                .get()
+            standings.push(data)
+        })
 
         return { standings }
     },
@@ -76,13 +54,17 @@ export default {
         },
     },
     computed: {
+        fistTeamData() {
+            return this.standings[1]
+        },
         champions() {
-            return this.standings.find((t) => t.rank === 1)
+            return this.fistTeamData[2]
         },
         seasonFinished() {
-            const maxPlayed = (this.standings.length - 1) * 2
+            // minus 2 to account for heading and you can't play yourselves
+            const maxPlayed = (this.standings.length - 2) * 2
 
-            if (this.standings[0]?.all.played === maxPlayed) return true
+            if (Number(this.fistTeamData[3]) === maxPlayed) return true
             return false
         },
     },
@@ -108,12 +90,14 @@ export default {
 
 table
     thead
-        td
+        th
             padding-bottom: 20px
             text-align: center
 
-    td
+    td,
+    th
         padding: 2px 8px
+        text-align: left
 
     tbody
         td
