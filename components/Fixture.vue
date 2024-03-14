@@ -1,11 +1,11 @@
 <template lang="pug">
     tr
-        td.cyan.team-name {{ fixture.teams.home.name }}
-            TeamEvents(:events="homeEvents")
-        td {{ Number.isInteger(fixture.goals.home) && Number.isInteger(fixture.goals.away) ? `${fixture.goals.home}-${fixture.goals.away}` : `v` }}
-        td.cyan.team-name {{ fixture.teams.away.name }}
-            TeamEvents(:events="awayEvents")
-        td.status {{ fixture.fixture.status.short === `NS` ? getKickOffTime(fixture.fixture.date) : fixture.fixture.status.short }}
+        td.cyan.team-name {{ fixture.homeTeam.shortName }}
+            //- TeamEvents(:events="homeEvents")
+        td {{ Number.isInteger(fixture.score.fullTime.home) && Number.isInteger(fixture.score.fullTime.away) ? `${fixture.score.fullTime.home}-${fixture.score.fullTime.away}` : `v` }}
+        td.cyan.team-name {{ fixture.awayTeam.shortName }}
+            //- TeamEvents(:events="awayEvents")
+        td.status {{ fixture.status === `FINISHED` ? `FT` : getKickOffTime(fixture.utcDate) }}
 </template>
 
 <script>
@@ -34,15 +34,16 @@ export default {
         },
     },
     async fetch() {
-        const data = await this.$http.$get(
-            `https://v3.football.api-sports.io/fixtures/events?fixture=${this.fixture.fixture.id}`,
-            {
-                headers: {
-                    'x-apisports-key': process.env.NUXT_ENV_API_FOOTBALL_KEY,
-                },
-            }
-        )
-        this.events = data.response
+        // const data = await this.$http.$get(
+        //     `https://api.football-data.org/v4/matches/${this.fixture.id}`,
+        //     {
+        //         headers: {
+        //             'X-Auth-Token': process.env.NUXT_ENV_FOOTBALL_DATA_API_KEY,
+        //         },
+        //     }
+        // )
+        // console.log('data', data)
+        // this.events = data.response
     },
     fetchOnServer: false,
     methods: {

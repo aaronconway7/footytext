@@ -4,12 +4,14 @@
         input(type="date" name="date" v-model="date").blackbg.green
     p(v-if="$fetchState.pending") Loading...
     p(v-else-if="$fetchState.error") Error :(
-    div(v-else)
-        p(v-if="dailyRequestsRemaining === 0") We've run out of daily API requests :(
-        p(v-else-if="fixtures.length === 0") No fixtures {{ isToday ? `today` : `on selected date` }}...
-        table(v-else)
+    .grid(v-else)
+        //- p(v-if="dailyRequestsRemaining === 0") We've run out of daily API requests :(
+        p(v-if="fixtures.length === 0") No fixtures {{ isToday ? `today` : `on selected date` }}...
+        table(v-else v-for="competition in Object.keys(groupedFixturesByCompetition)" :key="competition")
+            thead
+                th {{ competition }}
             tbody
-                Fixture(v-for="f in orderdFixtures" :fixture="f" :key="f.fixture.id")
+                Fixture(v-for="f in groupedFixturesByCompetition[competition]" :fixture="f" :key="f.id")
 </div>
 </template>
 
@@ -35,19 +37,25 @@ export default {
                     : -1
             )
         },
+        groupedFixturesByCompetition() {
+            return Object.groupBy(
+                this.fixtures,
+                ({ competition }) => competition.name
+            )
+        },
     },
     async fetch() {
         // Premier League = 39
         const data = await this.$http.$get(
-            `https://v3.football.api-sports.io/fixtures?date=${this.date}&league=39&season=2021`,
+            `https://api.football-data.org/v4/matches?date=${this.date}`,
             {
                 headers: {
-                    'x-apisports-key': process.env.NUXT_ENV_API_FOOTBALL_KEY,
+                    'X-Auth-Token': process.env.NUXT_ENV_FOOTBALL_DATA_API_KEY,
                 },
             }
         )
         this.$store.dispatch(`getDailyRequestsRemaining`)
-        this.fixtures = await data.response
+        this.fixtures = await data.matches
     },
     fetchOnServer: false,
     watch: {
@@ -81,4 +89,8 @@ input[type="date"]
 
 table
     width: 100%
+
+.grid
+    display: grid
+    grid-gap: 20px
 </style>
